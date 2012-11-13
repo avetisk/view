@@ -23,13 +23,14 @@ module.exports = View;
  *
  * @param {Object} obj
  * @param {Element} el
+ * @param {Object} opt Reactive options
  * @api public
  */
 
-function View(obj, el) {
+function View(obj, el, opt) {
   this.el = el;
   this.obj = obj;
-  this.view = reactive(el, obj);
+  this.view = reactive(el, obj, opt);
   this.bindings = {};
 }
 
